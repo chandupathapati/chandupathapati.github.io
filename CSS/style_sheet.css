@@ -1,10 +1,11 @@
 body, html {
     height: 100%;
-    margin: 0;
+    margin:0 ;
 }
 
 .bg {
-    background-image: url("./images/bg_image.jpg");
+    background-image: url("../images/bg_image.jpg");
+	/*http://maxpixel.freegreatpicture.com/Color-Flora-Nature-Blur-Desktop-Abstract-Bright-3118106*/
 /* Full height */
     height: 100%; 
 
@@ -12,4 +13,79 @@ body, html {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.logo {
+	
+	height:0.1%;
+	width:0.1%;
+}
+
+.card {
+  box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.3);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  float:right;
+  margin-right: 150px;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+
+/*Button on Resume Page*/
+.button_resume {
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button_resume:hover {background-color: #3e8e41}
+
+.button_resume:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+
+/*ContactMe Page*/
+.details{
+	
+	text-align:center;
+	float:center;
+	
 }
