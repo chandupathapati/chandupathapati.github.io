@@ -4,7 +4,7 @@ body, html {
 }
 
 .bg {
-    background-image: url("chandupathapati.github.io/IMAGES/bg_image.jpg");
+    background-image: url("../images/bg_image.jpg");
 	/*http://maxpixel.freegreatpicture.com/Color-Flora-Nature-Blur-Desktop-Abstract-Bright-3118106*/
 /* Full height */
     height: 100%; 
@@ -49,12 +49,12 @@ button {
   font-size: 18px;
 }
 
-a {
+/*a {
   text-decoration: none;
   font-size: 22px;
   color: black;
 }
-
+*/
 button:hover, a:hover {
   opacity: 0.7;
 }
@@ -87,5 +87,16 @@ button:hover, a:hover {
 	
 	text-align:center;
 	float:center;
+	
+}
+
+
+/* Project CSS*/
+
+#project_status
+{
+	
+    height: 950px; 
+	border-style:solid;
 	
 }
