@@ -106,9 +106,29 @@ button:hover, a:hover {
 
 /* Project CSS*/
 
-#project_status {
-	
-    height: 950px; 
-	border-style:solid;
-	
-}
+  .our-services img {
+            width: 250px;
+            display: block;
+            margin: 0 auto;
+        }
+           
+
+        #destinations {
+              padding-bottom: 1cm;
+        }
+
+        #marketing{
+                  text-align:center ;
+                  padding-top:1cm;
+                  padding-bottom:1cm;
+                                                      
+        }
+              
+        #footer{
+            background-color:#4747d1;
+            text-align:left;
+            padding-left:1cm;
+			padding-top: 1cm
+			height: 100px;
+           color:white;
+        }
