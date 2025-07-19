@@ -1,69 +1,360 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>CSV PATHAPATI</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<link rel="stylesheet" type="text/css" href="./CSS/style_sheet.css">
-
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-<!-- Latest compiled and minified JavaScript -->
-
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+  <meta charset="UTF-8">
+  <title>Chandra Pathapati | Senior Software Engineer & Big Data Specialist</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body {
+      background: #f7f9fa;
+      font-family: 'Segoe UI', Arial, sans-serif;
+    }
+    .sidebar {
+      background: #23272f;
+      color: #fff;
+      min-height: 100vh;
+      padding: 30px 0 0 0;
+      position: fixed;
+      width: 260px;
+      top: 0;
+      left: 0;
+      z-index: 100;
+      box-shadow: 2px 0 10px rgba(44,62,80,0.07);
+    }
+    .sidebar .profile-img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      margin-bottom: 10px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .sidebar h3 {
+      text-align: center;
+      margin-bottom: 5px;
+      font-weight: 600;
+    }
+    .sidebar .nav {
+      margin-top: 30px;
+    }
+    .sidebar .nav > li > a {
+      color: #fff;
+      font-size: 16px;
+      padding: 12px 30px;
+      border-left: 4px solid transparent;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .sidebar .nav > li.active > a,
+    .sidebar .nav > li > a:hover {
+      background: #1e2127;
+      border-left: 4px solid #ffd700;
+      color: #ffd700;
+    }
+    .sidebar .circle-progress {
+      width: 120px;
+      height: 120px;
+      margin: 30px auto 10px auto;
+      background: #23272f;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .sidebar .circle-progress svg {
+      width: 100px;
+      height: 100px;
+      transform: rotate(-90deg);
+    }
+    .sidebar .circle-progress .progress-text {
+      position: absolute;
+      width: 100px;
+      text-align: center;
+      font-size: 22px;
+      font-weight: 600;
+      color: #ffd700;
+      left: 80px;
+      top: 185px;
+    }
+    .main-content {
+      margin-left: 260px;
+      padding: 40px 30px 30px 30px;
+    }
+    .job-card {
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 2px 12px rgba(44,62,80,0.07);
+      padding: 30px 30px 20px 30px;
+      margin-bottom: 30px;
+      transition: box-shadow 0.2s;
+    }
+    .job-card:hover {
+      box-shadow: 0 4px 24px rgba(44,62,80,0.13);
+    }
+    .job-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+    .job-header .company-logo {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: #f3f3f3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 18px;
+      font-size: 28px;
+      color: #2a5298;
+    }
+    .job-header .job-title {
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+    .job-header .company-name {
+      font-size: 15px;
+      color: #888;
+    }
+    .job-meta {
+      margin-bottom: 10px;
+      font-size: 15px;
+      color: #555;
+    }
+    .badge-tag {
+      background: #e8f0fe;
+      color: #2a5298;
+      border-radius: 12px;
+      padding: 5px 14px;
+      font-size: 13px;
+      margin-right: 7px;
+      margin-bottom: 5px;
+      display: inline-block;
+    }
+    .job-desc {
+      margin-bottom: 10px;
+      color: #222;
+      font-size: 15px;
+    }
+    .job-responsibilities {
+      margin-bottom: 0;
+      padding-left: 18px;
+    }
+    .skills-section {
+      margin-bottom: 30px;
+    }
+    .skills-section .badge-skill {
+      background: #2a5298;
+      color: #fff;
+      margin: 3px 7px 3px 0;
+      font-size: 14px;
+      padding: 7px 14px;
+      border-radius: 20px;
+      display: inline-block;
+    }
+    @media (max-width: 991px) {
+      .sidebar { width: 100%; position: static; min-height: auto; }
+      .main-content { margin-left: 0; padding: 20px 5vw; }
+    }
+    @media (max-width: 767px) {
+      .main-content { padding: 10px 2vw; }
+      .job-card { padding: 18px 10px 12px 10px; }
+    }
+  </style>
 </head>
-
-
-
-<body class="bg">
-<div>
-<nav class="navbar navbar-inverse" >
-  <div class="container-fluid">
-   <div class="navbar-header">
-      <a class="navbar-brand" >csv pathapati</a>
+<body>
+  <div class="sidebar">
+    <img src="IMAGES/my_image.jpg" alt="Chandra Pathapati" class="profile-img">
+    <h3>Chandra Pathapati</h3>
+    <p style="text-align:center; color:#ffd700; font-size:15px; margin-bottom:8px;">Principal Software Engineer & AI Enthusiast</p>
+    <div style="text-align:center; margin-bottom:18px;">
+      <a href="https://github.com/chandupathapati" target="_blank" style="color:#fff; margin:0 8px;"><i class="fa fa-github fa-lg"></i></a>
+      <a href="https://www.linkedin.com/in/chandra-pathapati" target="_blank" style="color:#fff; margin:0 8px;"><i class="fa fa-linkedin fa-lg"></i></a>
+      <a href="https://www.facebook.com/chandrashakervarma" target="_blank" style="color:#fff; margin:0 8px;"><i class="fa fa-facebook fa-lg"></i></a>
     </div>
-       <ul class="nav navbar-nav navbar-right">
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="/Projects.html">Projects</a></li>
-      <li><a href="./Resume.html">Resume</a></li>
-      <li><a href="./ContactMe.html">Contact</a></li>
+    <ul class="nav">
+      <li class="active"><a href="#"><i class="fa fa-briefcase"></i> Experience</a></li>
+      <li><a href="./Projects.html"><i class="fa fa-folder-open"></i> Projects</a></li>
+      <li><a href="./Resume.html"><i class="fa fa-file-text"></i> Resume</a></li>
+      <li><a href="./ContactMe.html"><i class="fa fa-envelope"></i> Contact</a></li>
     </ul>
+    <div class="circle-progress" style="position:relative;">
+      <svg>
+        <circle cx="50" cy="50" r="45" stroke="#444" stroke-width="10" fill="none"/>
+        <circle cx="50" cy="50" r="45" stroke="#ffd700" stroke-width="10" fill="none"
+          stroke-dasharray="282.74"
+          stroke-dashoffset="99"
+          stroke-linecap="round"/>
+      </svg>
+      <div class="progress-text" style="position:absolute;top:38px;left:10px;">65%</div>
+    </div>
+    <div style="text-align:center; color:#bbb; font-size:13px;">
+      Profile Strength
+      <div style="margin-top:8px;">
+        <span style="color:#ffd700;">●</span> 32%
+        <span style="color:#6fcf97;">●</span> 10%
+        <span style="color:#f2994a;">●</span> 23%
+      </div>
+    </div>
   </div>
-</nav>
-
-<div class="card">
-  <img src="chandupathapati.github.io/IMAGES/my_image.jpg" alt="chandra" style="width:80%">
-  <h1>CSV Pathapati</h1>
-  <p class="title">Application Developer & Big Data Enthusiast</p>
-  <p>University Of Houston-Clear Lake</p>
-  <div style="margin: 24px 0;">
-    <a href="https://chandupathapati.github.io/"><i class="fa fa-github"></i></a> 
-    <a href="https://www.linkedin.com/in/chandra-pathapati"><i class="fa fa-linkedin"></i></a>  
-    <a href="https://www.facebook.com/chandrashakervarma"><i class="fa fa-facebook"></i></a> 
- </div>
-</div>
-</div>
-  <div>
-    <h4>Some articels I found interesting while browsing</h4>
-    <a href=https://www.thomashenson.com/schema-read-vs-schema-write-explained/> Schema On Read vs. Schema On Write Explained </a> 
-	
-	<h4> Big data learning resources</h4>
-	<a href=https://cognitiveclass.ai/> Cognitiveclass free Big data and Data science courses with access to Apache Ambari and Hadoop Environment </a> 
-	</br>
-	<a href=http://arun-teaches-u-tech.blogspot.com/> Arun's blog with study plan and sample scenarios for Cloudera certified Spark and Hadoop Developer </a> 
-	
-	
-  
+  <div class="main-content">
+    <div class="skills-section">
+      <h4 style="font-weight:600; color:#2a5298;">Skills</h4>
+      <span class="badge-skill">Java</span>
+      <span class="badge-skill">Spring Boot</span>
+      <span class="badge-skill">REST APIs</span>
+      <span class="badge-skill">Angular</span>
+      <span class="badge-skill">React</span>
+      <span class="badge-skill">TypeScript</span>
+      <span class="badge-skill">Python</span>
+      <span class="badge-skill">AWS</span>
+      <span class="badge-skill">Azure</span>
+      <span class="badge-skill">Docker</span>
+      <span class="badge-skill">Kubernetes</span>
+      <span class="badge-skill">SQL</span>
+      <span class="badge-skill">Microservices</span>
+      <span class="badge-skill">CI/CD</span>
+      <span class="badge-skill">Data Engineering</span>
+      <span class="badge-skill">Mentoring</span>
+    </div>
+    <div class="job-card">
+      <div class="job-header">
+        <div class="company-logo"><i class="fa fa-university"></i></div>
+        <div>
+          <div class="job-title">Principal Software Engineer</div>
+          <div class="company-name">Fidelity Investments</div>
+        </div>
+      </div>
+      <div class="job-meta">
+        <span class="badge-tag">Durham, NC</span>
+        <span class="badge-tag">Nov 2023 – Present</span>
+        <span class="badge-tag">Hybrid</span>
+      </div>
+      <div class="job-desc">
+        Leading design and development of enterprise web applications and microservices using Java, Spring Boot, and Angular. Driving adoption of AI enhancements and modern DevOps practices. Mentoring junior engineers and providing technical guidance across teams.
+      </div>
+      <ul class="job-responsibilities">
+        <li>Architecting scalable solutions and integrating AI-driven features.</li>
+        <li>Guiding teams on best practices and code quality.</li>
+        <li>Overseeing cloud deployments and CI/CD pipelines.</li>
+      </ul>
+    </div>
+    <div class="job-card">
+      <div class="job-header">
+        <div class="company-logo"><i class="fa fa-university"></i></div>
+        <div>
+          <div class="job-title">Senior Software Engineer</div>
+          <div class="company-name">Fidelity Investments</div>
+        </div>
+      </div>
+      <div class="job-meta">
+        <span class="badge-tag">Durham, NC</span>
+        <span class="badge-tag">Jan 2022 – Oct 2023</span>
+      </div>
+      <div class="job-desc">
+        Developed and maintained RESTful APIs and microservices using Java, Spring Boot, OpenAPI, Hibernate, and JPA. Managed Docker containerization, AWS cloud deployment, and application monitoring.
+      </div>
+      <ul class="job-responsibilities">
+        <li>Designed and implemented microservices and Angular SPAs.</li>
+        <li>Led PROD releases, post-installation testing, and troubleshooting using DataDog logs.</li>
+        <li>Mentored team members and promoted best practices.</li>
+      </ul>
+    </div>
+    <div class="job-card">
+      <div class="job-header">
+        <div class="company-logo"><i class="fa fa-cube"></i></div>
+        <div>
+          <div class="job-title">Software Engineer III</div>
+          <div class="company-name">Spreetail</div>
+        </div>
+      </div>
+      <div class="job-meta">
+        <span class="badge-tag">Remote</span>
+        <span class="badge-tag">Jul 2021 – Jan 2022</span>
+      </div>
+      <div class="job-desc">
+        Developed Micro Frontends using React, TypeScript, and Webpack module federation. Built backend APIs as Azure Functions and managed deployments in Azure Kubernetes Service.
+      </div>
+      <ul class="job-responsibilities">
+        <li>Created CI/CD pipelines with GitLab for automated deployments.</li>
+        <li>Designed service communication and performed load testing.</li>
+      </ul>
+    </div>
+    <div class="job-card">
+      <div class="job-header">
+        <div class="company-logo"><i class="fa fa-medkit"></i></div>
+        <div>
+          <div class="job-title">Software Engineer</div>
+          <div class="company-name">Cerner Corporation</div>
+        </div>
+      </div>
+      <div class="job-meta">
+        <span class="badge-tag">Malvern, PA</span>
+        <span class="badge-tag">Jan 2019 – Jul 2021</span>
+      </div>
+      <div class="job-desc">
+        Developed applications using Java, Spring Boot, JPA, Docker, Kubernetes, and MySQL.
+      </div>
+    </div>
+    <div class="job-card">
+      <div class="job-header">
+        <div class="company-logo"><i class="fa fa-building"></i></div>
+        <div>
+          <div class="job-title">Software Engineer</div>
+          <div class="company-name">ATSER Systems, Inc.</div>
+        </div>
+      </div>
+      <div class="job-meta">
+        <span class="badge-tag">Houston, TX</span>
+        <span class="badge-tag">Aug 2018 – Dec 2018</span>
+      </div>
+      <div class="job-desc">
+        Full stack Java development and migration to modern web technologies (HTML, CSS, JS, jQuery, Ajax). Batch processing and data migration between PostgreSQL and Oracle.
+      </div>
+    </div>
+    <div class="job-card">
+      <div class="job-header">
+        <div class="company-logo"><i class="fa fa-bank"></i></div>
+        <div>
+          <div class="job-title">Software Engineer</div>
+          <div class="company-name">Larsen & Toubro Infotech Ltd (Client: CITI BANK)</div>
+        </div>
+      </div>
+      <div class="job-meta">
+        <span class="badge-tag">India</span>
+        <span class="badge-tag">Jun 2014 – Jun 2016</span>
+      </div>
+      <div class="job-desc">
+        Developed enterprise platform services using Java, Spring, Hibernate, Angular, JSP, and PL/SQL. Designed and optimized SQL queries, PL/SQL packages, and database objects. Created shell scripts for automation and provided 24x7 production support.
+      </div>
+    </div>
+    <div class="job-card">
+      <div class="job-header">
+        <div class="company-logo"><i class="fa fa-bank"></i></div>
+        <div>
+          <div class="job-title">Software Engineer Trainee</div>
+          <div class="company-name">Larsen & Toubro Infotech Ltd (Client: CITI BANK)</div>
+        </div>
+      </div>
+      <div class="job-meta">
+        <span class="badge-tag">India</span>
+        <span class="badge-tag">Dec 2013 – Jun 2014</span>
+      </div>
+      <div class="job-desc">
+        Trained in Core Java, SQL, PL/SQL, Angular, UNIX, Shell Scripting, and Big Data tools. Supported release management, ETL processes, and database administration.
+      </div>
+    </div>
+    <div class="job-card">
+      <h4 style="font-weight:600; color:#2a5298;">Learning & Resources</h4>
+      <ul>
+        <li><a href="https://www.thomashenson.com/schema-read-vs-schema-write-explained/" target="_blank">Schema On Read vs. Schema On Write Explained</a></li>
+        <li><a href="https://cognitiveclass.ai/" target="_blank">Cognitiveclass: Free Big Data and Data Science courses</a></li>
+        <li><a href="http://arun-teaches-u-tech.blogspot.com/" target="_blank">Arun's blog: Study plan and sample scenarios for Cloudera certified Spark and Hadoop Developer</a></li>
+      </ul>
+    </div>
   </div>
-
 </body>
-
 </html>

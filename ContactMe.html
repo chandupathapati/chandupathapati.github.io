@@ -1,64 +1,153 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>CSV PATHAPATI</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<link rel="stylesheet" type="text/css" href="./CSS/style_sheet.css">
-
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-<!-- Latest compiled and minified JavaScript -->
-
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-
+  <meta charset="UTF-8">
+  <title>Chandra Pathapati | Contact</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body {
+      background: #f7f9fa;
+      font-family: 'Segoe UI', Arial, sans-serif;
+    }
+    .sidebar {
+      background: #23272f;
+      color: #fff;
+      min-height: 100vh;
+      padding: 30px 0 0 0;
+      position: fixed;
+      width: 260px;
+      top: 0;
+      left: 0;
+      z-index: 100;
+      box-shadow: 2px 0 10px rgba(44,62,80,0.07);
+    }
+    .sidebar .profile-img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      margin-bottom: 10px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .sidebar h3 {
+      text-align: center;
+      margin-bottom: 5px;
+      font-weight: 600;
+    }
+    .sidebar .nav {
+      margin-top: 30px;
+    }
+    .sidebar .nav > li > a {
+      color: #fff;
+      font-size: 16px;
+      padding: 12px 30px;
+      border-left: 4px solid transparent;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .sidebar .nav > li.active > a,
+    .sidebar .nav > li > a:hover {
+      background: #1e2127;
+      border-left: 4px solid #ffd700;
+      color: #ffd700;
+    }
+    .main-content {
+      margin-left: 260px;
+      padding: 60px 30px 30px 30px;
+      min-height: 100vh;
+    }
+    .contact-card {
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 2px 12px rgba(44,62,80,0.07);
+      padding: 40px 30px 30px 30px;
+      max-width: 500px;
+      margin: 40px auto 0 auto;
+      text-align: center;
+    }
+    .contact-card h2 {
+      color: #2a5298;
+      font-weight: 600;
+      margin-bottom: 18px;
+    }
+    .contact-info {
+      font-size: 18px;
+      margin-bottom: 18px;
+      color: #23272f;
+    }
+    .contact-info i {
+      color: #2a5298;
+      margin-right: 10px;
+    }
+    .contact-card a {
+      color: #2a5298;
+      text-decoration: none;
+      word-break: break-all;
+    }
+    .contact-card a:hover {
+      text-decoration: underline;
+    }
+    .contact-social {
+      margin-top: 18px;
+    }
+    .contact-social a {
+      color: #2a5298;
+      margin: 0 10px;
+      font-size: 22px;
+      transition: color 0.2s;
+    }
+    .contact-social a:hover {
+      color: #ffd700;
+    }
+    @media (max-width: 991px) {
+      .sidebar { width: 100%; position: static; min-height: auto; }
+      .main-content { margin-left: 0; padding: 30px 5vw; }
+    }
+    @media (max-width: 767px) {
+      .main-content { padding: 10px 2vw; }
+      .contact-card { padding: 18px 10px 12px 10px; }
+    }
+  </style>
 </head>
-
-
-
-<body >
-<div>
-<nav class="navbar navbar-inverse" >
-  <div class="container-fluid">
-   <div class="navbar-header">
-      <a class="navbar-brand" >csv pathapati</a>
+<body>
+  <div class="sidebar">
+    <img src="IMAGES/my_image.jpg" alt="Chandra Pathapati" class="profile-img">
+    <h3>Chandra Pathapati</h3>
+    <p style="text-align:center; color:#ffd700; font-size:15px; margin-bottom:8px;">Senior Software Engineer & Big Data Specialist</p>
+    <div style="text-align:center; margin-bottom:18px;">
+      <a href="https://github.com/chandupathapati" target="_blank" style="color:#fff; margin:0 8px;"><i class="fa fa-github fa-lg"></i></a>
+      <a href="https://www.linkedin.com/in/chandra-pathapati" target="_blank" style="color:#fff; margin:0 8px;"><i class="fa fa-linkedin fa-lg"></i></a>
+      <a href="https://www.facebook.com/chandrashakervarma" target="_blank" style="color:#fff; margin:0 8px;"><i class="fa fa-facebook fa-lg"></i></a>
     </div>
-    <ul class="nav navbar-nav navbar-right">
-      <li><a href="./index.html">Home</a></li>
-      <li><a href="./Projects.html">Projects</a></li>
-      <li><a href="./Resume.html">Resume</a></li>
-      <li><a href="./ContactMe.html">Contact</a></li>
+    <ul class="nav">
+      <li><a href="./index.html"><i class="fa fa-home"></i> Home</a></li>
+      <li><a href="./Projects.html"><i class="fa fa-folder-open"></i> Projects</a></li>
+      <li><a href="./Resume.html"><i class="fa fa-file-text"></i> Resume</a></li>
+      <li class="active"><a href="./ContactMe.html"><i class="fa fa-envelope"></i> Contact</a></li>
     </ul>
   </div>
-</nav>
-</div>
-
-
-<div class="details">
-<h3>Chandra  Pathapati</h3>
-
-<br/>
-<a>Email @</a>
-<h4>chandu.pathapati@gmail.com</h4>
-
-
-<br/>
-<a>Mobile: +18328154632 </a>
-
-<br/>
-&nbsp
-<address>
-USA
-</address>
-
-</div>
-
+  <div class="main-content">
+    <div class="contact-card">
+      <h2>Contact Me</h2>
+      <div class="contact-info">
+        <i class="fa fa-user"></i> Chandra Pathapati
+      </div>
+      <div class="contact-info">
+        <i class="fa fa-envelope"></i>
+        <a href="mailto:chandu.pathapati@gmail.com">chandu.pathapati@gmail.com</a>
+      </div>
+      <div class="contact-info">
+        <i class="fa fa-map-marker"></i> USA
+      </div>
+      <div class="contact-social">
+        <a href="https://github.com/chandupathapati" target="_blank"><i class="fa fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/chandra-pathapati" target="_blank"><i class="fa fa-linkedin"></i></a>
+        <a href="https://www.facebook.com/chandrashakervarma" target="_blank"><i class="fa fa-facebook"></i></a>
+      </div>
+    </div>
+  </div>
 </body>
-
 </html>

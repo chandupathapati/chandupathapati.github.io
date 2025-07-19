@@ -1,146 +1,210 @@
 <!DOCTYPE html>
-
 <html>
 <head>
   <meta charset="UTF-8">
-<title>CSV PATHAPATI</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-<!-- Latest compiled and minified JavaScript -->
-
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
-<link rel="stylesheet" type="text/css" href="./CSS/style_sheet.css">
+  <title>Chandra Pathapati | Projects</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body {
+      background: #f7f9fa;
+      font-family: 'Segoe UI', Arial, sans-serif;
+    }
+    .sidebar {
+      background: #23272f;
+      color: #fff;
+      min-height: 100vh;
+      padding: 30px 0 0 0;
+      position: fixed;
+      width: 260px;
+      top: 0;
+      left: 0;
+      z-index: 100;
+      box-shadow: 2px 0 10px rgba(44,62,80,0.07);
+    }
+    .sidebar .profile-img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      margin-bottom: 10px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .sidebar h3 {
+      text-align: center;
+      margin-bottom: 5px;
+      font-weight: 600;
+    }
+    .sidebar .nav {
+      margin-top: 30px;
+    }
+    .sidebar .nav > li > a {
+      color: #fff;
+      font-size: 16px;
+      padding: 12px 30px;
+      border-left: 4px solid transparent;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .sidebar .nav > li.active > a,
+    .sidebar .nav > li > a:hover {
+      background: #1e2127;
+      border-left: 4px solid #ffd700;
+      color: #ffd700;
+    }
+    .main-content {
+      margin-left: 260px;
+      padding: 60px 30px 30px 30px;
+      min-height: 100vh;
+    }
+    .projects-section {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .project-card {
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 2px 12px rgba(44,62,80,0.07);
+      padding: 30px 20px 20px 20px;
+      margin-bottom: 30px;
+      text-align: center;
+      transition: box-shadow 0.2s;
+      min-height: 420px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .project-card img {
+      max-width: 100%;
+      max-height: 140px;
+      margin: 0 auto 15px auto;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+    .project-card h4 {
+      color: #2a5298;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .project-card p {
+      color: #23272f;
+      font-size: 15px;
+      min-height: 60px;
+    }
+    .project-card .btn {
+      background: #2a5298;
+      color: #fff;
+      border-radius: 22px;
+      padding: 8px 24px;
+      font-size: 15px;
+      margin-top: 10px;
+      transition: background 0.2s;
+      border: none;
+    }
+    .project-card .btn:hover {
+      background: #ffd700;
+      color: #23272f;
+    }
+    @media (max-width: 991px) {
+      .sidebar { width: 100%; position: static; min-height: auto; }
+      .main-content { margin-left: 0; padding: 30px 5vw; }
+    }
+    @media (max-width: 767px) {
+      .main-content { padding: 10px 2vw; }
+      .project-card { padding: 18px 10px 12px 10px; }
+    }
+  </style>
 </head>
-
-
-
-
 <body>
-<div>
-<nav class="navbar navbar-inverse" >
-  <div class="container-fluid">
-   <div class="navbar-header">
-      <a class="navbar-brand" >csv pathapati</a>
+  <div class="sidebar">
+    <img src="IMAGES/my_image.jpg" alt="Chandra Pathapati" class="profile-img">
+    <h3>Chandra Pathapati</h3>
+    <p style="text-align:center; color:#ffd700; font-size:15px; margin-bottom:8px;">Senior Software Engineer & Big Data Specialist</p>
+    <div style="text-align:center; margin-bottom:18px;">
+      <a href="https://github.com/chandupathapati" target="_blank" style="color:#fff; margin:0 8px;"><i class="fa fa-github fa-lg"></i></a>
+      <a href="https://www.linkedin.com/in/chandra-pathapati" target="_blank" style="color:#fff; margin:0 8px;"><i class="fa fa-linkedin fa-lg"></i></a>
+      <a href="https://www.facebook.com/chandrashakervarma" target="_blank" style="color:#fff; margin:0 8px;"><i class="fa fa-facebook fa-lg"></i></a>
     </div>
-       <ul class="nav navbar-nav navbar-right">
-      <li><a href="./index.html">Home</a></li>
-      <li class="active"><a href="./Projects.html">Projects</a></li>
-      <li><a href="./Resume.html">Resume</a></li>
-      <li><a href="./ContactMe.html">Contact</a></li>
+    <ul class="nav">
+      <li><a href="./index.html"><i class="fa fa-home"></i> Home</a></li>
+      <li class="active"><a href="./Projects.html"><i class="fa fa-folder-open"></i> Projects</a></li>
+      <li><a href="./Resume.html"><i class="fa fa-file-text"></i> Resume</a></li>
+      <li><a href="./ContactMe.html"><i class="fa fa-envelope"></i> Contact</a></li>
     </ul>
   </div>
-</nav>
-</div>
-   
-        <div class="row">
-            <div class="container" id="marketing">
-               
-                    <h1>My Projects!</h1>
-                    Brief description of my Academic Projects 
-
-            </div>
+  <div class="main-content">
+    <div class="projects-section">
+      <h2 style="color:#2a5298; font-weight:600; margin-bottom:30px;">My Projects</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="project-card">
+            <h4>Scraping web data to JSON</h4>
+            <img src="IMAGES/Python_Programming.jpg" alt="Scraping web data to JSON">
+            <p>
+              Fetches Caltrans offices page: <a href="http://www.dot.ca.gov/mail.htm" target="_blank">dot.ca.gov/mail.htm</a>, extracts offices information and returns office info in JSON form.
+            </p>
+            <a href="https://github.com/chandupathapati/Web-Scrapping-Python" target="_blank" class="btn"><i class="fa fa-github"></i> View Details</a>
+          </div>
         </div>
-        <div class="row">
-
-            <div class="container-fluid" id="destinations">
-
-                <section class="our-services">
-
-					<div class="col-sm-4">
-                        <h4>Scraping web data to JSON</h4>
-
-                        <img class="img-responsive" src="chandupathapati.github.io/IMAGES/Python_Programming.jpg" />
-                        <p>
-							Fetches Caltrans offices page: http://www.dot.ca.gov/mail.htm extracts offices information and returns office info in JSON form. 
-						</p>
-                       <input type="button" class="btn btn-default" onclick="location.href='https://github.com/chandupathapati/Web-Scrapping-Python';" value="View Details" />
-                    </div>
-                    
-
-                    <div class="col-sm-4">
-                        <h4>Twitter Tags Streaming Data Analysis</h4>
-
-                        <img class="img-responsive" src="chandupathapati.github.io/IMAGES/Python_Programming.jpg" />
-                        <p>
-							Built a program using twitter streaming data by filtering tags and built a system using Map Reduce paradigm 
-							to displays a visualized graph with top 5 countries and languages in which the filtered tweets appeared. 
-						</p>
-                       <input type="button" class="btn btn-default" onclick="location.href='https://github.com/chandupathapati/Live-Streaming-Data-Analysis';" value="View Details" />
-                    </div>
-
-
-                    <div class="col-sm-4">
-                        <h4>Los Angeles Crime Data Analysis(DATA WAREHOUSE, OLAP, SSAS)</h4>
-                        <img class="img-responsive" src="chandupathapati.github.io/IMAGES/Log_Angeles.jpg" />
-                        <p>
-							Performed ETL operation on Los Angeles Crime raw data set to extracted Facts and Dimensions from the E-R Model and designed STAR Schema. Generated reports on crime rate based on different dimensions.
-						</p>
-                        
-						<input type="button" class="btn btn-default" onclick="location.href='https://www.slideshare.net/secret/JKQmwHcw3qyKKA';" value="View Details" />
-                    </div>
-                </section>
-				
-            </div>
-			<div class="container-fluid" id="destinations">
-			<section class="our-services">
-
-
-                    <div class="col-sm-4">
-                        <h4>Car Service Web Application(C#, ASP.NET)</h4>
-                        <img class="img-responsive" src="chandupathapati.github.io/IMAGES/Car_Service.jpg" />
-                        <p>Developed a prototype of a web application which mainly focuses on booking slots for car Servicing and repairingof a vehicle.</p>
-                        <input type="button" class="btn btn-default" onclick="location.href='https://github.com/chandupathapati/Auto-Service-Web-Application';" value="View Details" />
-                    </div>
-
-                    <div class="col-sm-4">
-                        <h4>DATABASE</h4>
-
-                        <img class="img-responsive" src="chandupathapati.github.io/IMAGES/database.jpg" />
-                        <p>
-							Sample Employee and Student Schemas with sample Procedure, Functions & Packages
-						</p>
-                        <input type="button" class="btn btn-default" onclick="location.href='https://github.com/chandupathapati/Database';" value="View Details" />
-                    </div>
-
-
-                    <div class="col-sm-4">
-                        <h4>Daily Match Online Web Application(JAVA J2EE JDBC)</h4>
-                        <img class="img-responsive" src="chandupathapati.github.io/IMAGES/Dating_app.jpg" />
-                        <p>
-							Developed a prototype of an online dating web application which mainly focuses on suggesting top three profiles based on your interests and lets you send request and exchange messages. 
-						</p>
-							<input type="button" class="btn btn-default" onclick="location.href='https://github.com/chandupathapati/Daily-Match-Online-Web-Application';" value="View Details" />
-                    </div>
-                </section>
-			</div>
+        <div class="col-md-4">
+          <div class="project-card">
+            <h4>Twitter Tags Streaming Data Analysis</h4>
+            <img src="IMAGES/Python_Programming.jpg" alt="Twitter Tags Streaming Data Analysis">
+            <p>
+              Built a program using Twitter streaming data by filtering tags and built a system using MapReduce paradigm to display a visualized graph with top 5 countries and languages in which the filtered tweets appeared.
+            </p>
+            <a href="https://github.com/chandupathapati/Live-Streaming-Data-Analysis" target="_blank" class="btn"><i class="fa fa-github"></i> View Details</a>
+          </div>
         </div>
-
-
-      
-
-        <div class="row">
-                  <div  id="footer">
-                                &copy; 2018 Chandra Company, Inc.
-                  </div>
+        <div class="col-md-4">
+          <div class="project-card">
+            <h4>Los Angeles Crime Data Analysis (DATA WAREHOUSE, OLAP, SSAS)</h4>
+            <img src="IMAGES/Log_Angeles.jpg" alt="Los Angeles Crime Data Analysis">
+            <p>
+              Performed ETL operation on Los Angeles Crime raw data set, extracted Facts and Dimensions from the E-R Model, and designed STAR Schema. Generated reports on crime rate based on different dimensions.
+            </p>
+            <a href="https://www.slideshare.net/secret/JKQmwHcw3qyKKA" target="_blank" class="btn"><i class="fa fa-external-link"></i> View Details</a>
+          </div>
         </div>
-        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-    </form>
-
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="project-card">
+            <h4>Car Service Web Application (C#, ASP.NET)</h4>
+            <img src="IMAGES/Car_Service.jpg" alt="Car Service Web Application">
+            <p>
+              Developed a prototype of a web application which mainly focuses on booking slots for car servicing and repairing of a vehicle.
+            </p>
+            <a href="https://github.com/chandupathapati/Auto-Service-Web-Application" target="_blank" class="btn"><i class="fa fa-github"></i> View Details</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="project-card">
+            <h4>DATABASE</h4>
+            <img src="IMAGES/database.jpg" alt="DATABASE">
+            <p>
+              Sample Employee and Student Schemas with sample Procedures, Functions & Packages.
+            </p>
+            <a href="https://github.com/chandupathapati/Database" target="_blank" class="btn"><i class="fa fa-github"></i> View Details</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="project-card">
+            <h4>Daily Match Online Web Application (JAVA J2EE JDBC)</h4>
+            <img src="IMAGES/Dating_app.jpg" alt="Daily Match Online Web Application">
+            <p>
+              Developed a prototype of an online dating web application which suggests top three profiles based on your interests and lets you send requests and exchange messages.
+            </p>
+            <a href="https://github.com/chandupathapati/Daily-Match-Online-Web-Application" target="_blank" class="btn"><i class="fa fa-github"></i> View Details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center; color:#888; margin-top:40px;">
+      &copy; 2025 Chandra Pathapati
+    </div>
+  </div>
 </body>
 </html>
